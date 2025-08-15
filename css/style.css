@@ -1,0 +1,320 @@
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+
+  scroll-behavior: smooth;
+}
+
+body {
+ 
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  background-color: #f8f9fa;
+  color: #212529;
+}
+
+img, picture, video, canvas, svg {
+  
+  display: block;
+  max-width: 100%;
+}
+
+
+.container {
+    width: 100%;
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 0 15px; 
+}
+
+.header {
+  background-color: #ffffff;
+  padding: 20px 0;
+  border-bottom: 1px solid #dee2e6;
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 2.5rem; 
+  color: #343a40;
+}
+
+
+.profiles-section {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.profiles-section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+
+.profiles-grid {
+  display: grid;
+  
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px; 
+}
+
+
+.card {
+  background-color: #ffffff;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  overflow: hidden; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+}
+
+.card__image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover; 
+}
+
+.card__content {
+  padding: 15px;
+  flex-grow: 1; 
+  display: flex;
+  flex-direction: column;
+}
+
+.card__title {
+  font-size: 1.25rem;
+  margin-bottom: 5px;
+  color: #007bff; 
+}
+
+.card__meta {
+  font-size: 0.9rem;
+  color: #6c757d;
+  margin-bottom: 15px;
+}
+
+.card__date {
+  font-size: 0.8rem;
+  color: #6c757d;
+  margin-top: auto; 
+}
+
+
+
+.links-section {
+  background-color: #e9ecef;
+  padding: 40px 0;
+}
+
+
+.links-section__container {
+  display: flex;
+  flex-wrap: wrap; 
+  gap: 30px;
+}
+
+.regions-list, .categories-list {
+  flex: 1; 
+  min-width: 250px; 
+}
+
+.links-section h2 {
+  margin-bottom: 15px;
+}
+
+.links-section ul {
+  list-style: none; 
+}
+
+.links-section li {
+  margin-bottom: 10px;
+}
+
+.links-section a {
+  text-decoration: none;
+  color: #007bff;
+  transition: color 0.2s ease-in-out;
+}
+
+.links-section a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+
+.footer {
+  background-color: #343a40;
+  color: #f8f9fa;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
+}
+
+.breadcrumb-nav {
+  background-color: #f8f9fa;
+  padding: 15px 0;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.breadcrumb {
+  list-style: none;
+  display: flex; 
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.breadcrumb li {
+  color: #6c757d;
+}
+
+
+.breadcrumb li + li::before {
+  content: '›';
+  margin: 0 10px;
+  color: #6c757d;
+}
+
+.breadcrumb a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+
+.page-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.content-main {
+  flex: 1; 
+  min-width: 65%;
+}
+
+.sidebar {
+  flex-basis: 250px; 
+  flex-grow: 1; 
+}
+
+.content-main .profiles-section {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.content-main .profiles-section h2, .sidebar h2 {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.site-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.site-title a {
+  color: #343a40;
+  text-decoration: none;
+}
+
+.post-container {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.post-title {
+  font-size: 2.8rem;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.post-content {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  gap: 40px;
+}
+
+/* --- Галерея на сторінці поста --- */
+.post-gallery {
+  display: grid;
+  gap: 15px;
+}
+
+.post-gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* --- Деталі на сторінці поста --- */
+.post-details h2 {
+  font-size: 1.5rem;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 5px;
+}
+
+/* Перший заголовок без відступу зверху */
+.post-details h2:first-of-type {
+  margin-top: 0;
+}
+
+.details-list {
+  list-style: none;
+  line-height: 1.8;
+}
+
+.post-description {
+  line-height: 1.7;
+}
+
+.post-contacts p {
+  margin-bottom: 10px;
+}
+.post-contacts a {
+  color: #007bff;
+  text-decoration: none;
+}
+.post-contacts a:hover {
+  text-decoration: underline;
+}
+
+/* --- Кнопка "Зв'язатися" --- */
+.cta-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background-color: #007bff;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  text-align: center;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.cta-button:hover {
+  background-color: #0056b3;
+}
+
+
+@media (max-width: 991.98px) {
+  .post-content {
+      
+      grid-template-columns: 1fr;
+  }
+}
